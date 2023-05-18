@@ -1,0 +1,183 @@
+class MagicalCustomFields extends HTMLElement{constructor(){super()}connectedCallback(){const r=JSON.parse(this.querySelector("script[type='application/json']").innerHTML),s=r.field_groups,c=function(){var e=document.querySelector("[data-type='add-to-cart-form']")||document.querySelector("[action='/cart/add']");{var t;return null!==e?(t=e.getAttribute("id"),null!==(e=e.querySelector('button[type="submit"]')||document.querySelector('[name="add"]')||document.querySelector('[data-action="add-to-cart"]')||document.querySelector("[data-add-to-cart]")||document.querySelector("[data-add-to-cart-text]")||document.getElementById("AddToCart")||document.getElementById("addToCart"))&&e.addEventListener("click",e=>{!function(){let t=!1;var e=document.querySelectorAll(`custom-fields input[type='text'], 
+        custom-fields input[type='date'],  
+        custom-fields input[type='time'], 
+        custom-fields textarea, 
+        custom-fields select`),e=(e.forEach(e=>{o(e)&&(t=!0)}),document.querySelectorAll(`custom-fields fieldset[data-type='checkbox'],
+        custom-fields fieldset[data-type='radio']`));return e.forEach(e=>{n(e)&&(t=!0)}),t}()||(e.preventDefault(),e.stopPropagation());var t=document.querySelectorAll(`custom-fields input,
+                custom-fields textarea,
+                custom-fields select`);const d=e.target.closest("form");void 0!==d&&(d.querySelectorAll('input[type="hidden"].ma-hidden-custom-field').forEach(e=>{e.remove()}),t.forEach(e=>{let t=!1;var i,a,r=document.createElement("input");r.setAttribute("type","hidden"),r.setAttribute("class","ma-hidden-custom-field"),"text"==e.type||"textarea"==e.type||"date"==e.type||"select-one"==e.type?(r.setAttribute("name",f(e.dataset.name)),r.setAttribute("value",v(e.value)),t=!0):"time"==e.type?(i=new Date("1970-01-01T"+e.value+"Z").toLocaleTimeString("en-US",{timeZone:"UTC",hour12:!0,hour:"numeric",minute:"numeric"}),r.setAttribute("name",f(e.dataset.name)),r.setAttribute("value",i),t=!0):"checkbox"!=e.type&&"radio"!=e.type||1==e.checked&&((i=d.querySelector(`input[name="${m(e.dataset.name)}"].ma-hidden-custom-field`))?(a=i.value+", "+e.value,i.value=a):(r.setAttribute("name",f(e.dataset.name)),r.setAttribute("value",v(e.value)),t=!0)),t&&d.appendChild(r)}))},!0),t):""}}();let t=document.querySelectorAll("form[action='"+r.cart_url+"']"),i=!1,a=!1;var e=document.querySelector("body");let d;function l(t,i){let a=void 0;try{a=void 0!==ShopifyAnalytics.meta.selectedVariantId?ShopifyAnalytics.meta.selectedVariantId:void 0!==r.current_product.selected_variant?r.current_product.selected_variant:void 0}catch(e){a=void 0!==r.current_product.selected_variant?r.current_product.selected_variant:void 0}if(a!==t){t=r.current_product.variant_options.find(e=>parseInt(e.id)===parseInt(a));if(void 0===t)return;t=function(d,l){let i=d.product_type,a=d.options_with_values,o=[];return s.forEach(r=>{let e="conditions";if("all_products"==(e=void 0!==r.logic.appliedTo?r.logic.appliedTo[0]:e)&&o.push({id:r.id}),"products"==e){let t;r.logic.products.forEach(e=>{!0===(t=e.variants.some(e=>parseInt(e.id)===parseInt(d.variant_id)))&&o.push({id:r.id})})}if("collections"==e){let i=[],a=void 0;void 0!==(a=!0===l?cartProducts.find(e=>parseInt(e.id)===d.product_id):d)?(r.logic.collections.forEach(t=>{var e=a.collections.some(e=>e.id===t.id);i.push(e)}),i.some(e=>1==e)&&o.push({id:r.id})):window.location.reload()}if(null!==r.logic.conditions&&"conditions"==e){var t=r.logic.conditions.map(t=>{switch(t.column){case"product_type":if("equals"===t.relation)return t.condition==i?"pass":"fail";break;case"option_name":if("equals"===t.relation)return void 0!==a.find(e=>e.name==t.condition)?"pass":"fail";break;case"option_value":if("equals"===t.relation)return void 0!==a.find(e=>e.value==t.condition)?"pass":"fail"}});switch(r.logic.appliedDisjunctively[0]){case"false":t.every(e=>"pass"==e)&&o.push({id:r.id});break;case"true":t.some(e=>"pass"==e)&&o.push({id:r.id})}}}),o}({product_id:r.current_product.id,product_type:r.current_product.product_type,options_with_values:t.options_with_values,variant_id:a,collections:r.current_product.collections},!1);let e="";t.forEach(t=>{const o=r.field_groups.find(e=>e.id===t.id);o.fields.some(e=>!0===e.required),r.locale.required;e+=`<div class="ma-custom-field-group">${o.fields.map(e=>{var i=e,a=o.id;if(""!=c){i.required&&document.getElementById(c).removeAttribute("novalidate");const d=`field-${a}-`+i.id,l=m(i.title);var t=""+(i.placeholder||"");switch(i.type){case"short_answer":return`
+            <div class="ma-custom-field">
+              <label id="${d}-label" for="${d}">
+                ${i.title}
+                ${i.required?u():""}
+              </label>
+              <input
+              ${i.required?'required class="required"':""}
+              id="${d}"
+              form="${c}"
+              type="text"
+              placeholder="${t}" 
+              aria-labelledby="${d}-label"
+              aria-describedby="${d}-desc"
+              data-name="properties[${l}]" 
+              data-field-required="${d}-required">
+              <span aria-live="polite">${i.required?p(d,""):""}</span>
+              ${i.description?`
+              <span class="field-description" id="${d}-desc">
+                ${i.description?""+i.description:""}
+              </span>`:""}
+            </div>`;case"paragraph":return`
+            <div class="ma-custom-field">
+              <label id="${d}-label" for="${d}">
+                ${i.title}
+                ${i.required?u():""}
+              </label>
+              <textarea
+              ${i.required?'required class="required"':""}
+              id="${d}"
+              form="${c}"
+              placeholder="${t}" 
+              rows="4"
+              aria-labelledby="${d}-label"
+              aria-describedby="${d}-desc"
+              data-name="properties[${l}]"
+              data-field-required="${d}-required"
+              ></textarea>
+              <span aria-live="polite">${i.required?p(d,""):""}</span>
+              ${i.description?`
+              <span class="field-description" id="${d}-desc">
+                ${i.description?""+i.description:""}
+              </span>`:""}
+            </div>`;case"date":return`
+              <div class="ma-custom-field">
+                <label id="${d}-label" for="${d}">
+                  ${i.title}
+                  ${i.required?u():""}
+                </label>
+                <input
+                ${i.required?'required class="required"':""}
+                id="${d}"
+                form="${c}"
+                type="date"
+                aria-labelledby="${d}-label"
+                aria-describedby="${d}-desc"
+                data-name="properties[${l}]" 
+                data-field-required="${d}-required">
+                <span aria-live="polite">${i.required?p(d,""):""}</span>
+                ${i.description?`
+                <span class="field-description" id="${d}-desc">
+                  ${i.description?""+i.description:""}
+                </span>`:""}
+              </div>`;case"time":return`
+            <div class="ma-custom-field">
+              <label id="${d}-label" for="${d}">
+                ${i.title}
+                ${i.required?u():""}
+              </label>
+              <input
+              ${i.required?'required class="required"':""}
+              id="${d}"
+              form="${c}"
+              type="time"
+              aria-labelledby="${d}-label"
+              aria-describedby="${d}-desc"
+              data-name="properties[${l}]" 
+              data-field-required="${d}-required">
+              <span aria-live="polite">${i.required?p(d,""):""}</span>
+              ${i.description?`
+              <span class="field-description" id="${d}-desc">
+                ${i.description?""+i.description:""}
+              </span>`:""}
+            </div>`;case"checkboxes":var r=i.validation[0]?`Select ${i.validation[0].column.replace("_"," ")} ${i.validation[0].value} ${1==parseInt(i.validation[0].value)?"option":"options"}.`:"";return`
+          <div class="ma-custom-field">
+              <fieldset 
+              data-type="checkbox"
+              data-validation-column="${i.validation[0].column}"
+              data-validation-value="${i.validation[0].value}"
+              data-required="${i.required}"
+              data-field-required="${d}-required">
+              <legend>
+                ${i.title}
+                ${i.required?u():""}
+              </legend>
+              ${void 0!==i.options?i.options.map(e=>{var t=e.value.toLowerCase().replace(/\W/g,"-"),t=`field-${a}-${i.id}-`+t;return`
+                      <div>
+                        <label id="${t}-label" for="${t}">
+                          <input
+                          id="${t}"
+                          form="${c}"
+                          type="checkbox"
+                          value="${m(e.value)}"
+                          data-is-required="${i.required}"
+                          data-name="properties[${l}]"
+                          data-field-required="${d}-required">
+                          ${e.value}
+                        </label>
+                      </div>
+                      `}).join(""):""}
+              <span aria-live="polite">${i.required?p(d,r):""}</span>
+              ${i.description?`<span class="field-description">${i.description}</span>`:""}
+              </fieldset>  
+          </div>`;case"multiple_choice":return`
+            <div class="ma-custom-field">
+                <fieldset 
+                data-type="radio"
+                data-required="${i.required}"
+                data-field-required="${d}-required">
+                <legend>
+                  ${i.title}
+                  ${i.required?u():""}
+                </legend>
+                ${void 0!==i.options?i.options.map(e=>{var t=e.value.toLowerCase().replace(/\W/g,"-"),t=`field-${a}-${i.id}-`+t;return`
+                        <div>
+                          <input
+                          id="${t}"
+                          form="${c}"
+                          type="radio"
+                          value="${m(e.value)}"
+                          data-is-required="${i.required}"
+                          data-name="properties[${l}]"
+                          data-field-required="${d}-required">
+                          <label id="${t}-label" for="${t}">
+                            ${e.value}
+                          </label>
+                        </div>
+                        `}).join(""):""}
+                <span aria-live="polite">${i.required?p(d,""):""}</span>
+                ${i.description?`<span class="field-description">${i.description}</span>`:""}
+                </fieldset>  
+            </div>`;case"dropdown":return`
+          <div class="ma-custom-field">
+            <label id="${d}-label" for="${d}">
+              ${i.title}
+              ${i.required?u():""}
+            </label>
+            <select 
+            id="${d}"
+            form="${c}"  
+            ${i.required?'required class="required"':""}           
+            aria-labelledby="${d}-label"
+            aria-describedby="${d}-desc"
+            data-name="properties[${l}]" 
+            data-field-required="${d}-required"
+            >
+              <option value="" disabled selected>Select</option>
+              ${void 0!==i.options?i.options.map(e=>`<option value="${m(e.value)}">${e.value}</option>`).join(""):""}
+            </select>
+            <span aria-live="polite">${i.required?p(d,""):""}</span>
+            ${i.description?`
+            <span class="field-description" id="${d}-desc">
+              ${i.description?""+i.description:""}
+            </span>`:""}
+          </div>`}}}).join("")}</div>`}),i.innerHTML!==e&&(i.innerHTML=e)}return document.querySelectorAll(`custom-fields input[type='text'], 
+        custom-fields input[type='date'], 
+        custom-fields input[type='time'],  
+        custom-fields textarea`).forEach(e=>{e.addEventListener("keyup",e=>{o(e.target)})}),document.querySelectorAll("custom-fields select").forEach(e=>{e.addEventListener("change",e=>{o(e.target)})}),document.querySelectorAll(`custom-fields fieldset[data-type='checkbox'],
+        custom-fields fieldset[data-type='radio']`).forEach(e=>{e.addEventListener("change",e=>{var t;t=e.target,t.closest("fieldset").querySelectorAll('input[type="radio"]:checked').forEach(e=>{t!==e&&(e.checked=!1)}),n(e.target.closest("fieldset"))})}),a}function o(e){let t=!1;var i=e.dataset.fieldRequired,i=document.getElementById(i);return null!==i&&(e.checkValidity()?(e.classList.remove("invalid"),i.classList.remove("active")):(e.classList.add("invalid"),i.classList.add("active"),t=!0)),t}function n(e){let t=!1;var i="true"===e.dataset.required;if(i){var a=e.dataset.fieldRequired,a=document.getElementById(a),r=e.dataset.validationColumn,d=e.dataset.validationValue,l=e.dataset.type,o=e.querySelectorAll(`input[type="checkbox"]:checked,
+        input[type="radio"]:checked`).length;if(0<o){switch(r){case"at_least":o<d&&(t=!0);break;case"at_most":d<o&&(t=!0);break;case"exactly":o!=d&&(t=!0)}"radio"==l&&1!=o&&(t=!0)}else i&&(t=!0);t?(e.classList.add("invalid"),a.classList.add("active")):(e.classList.remove("invalid"),a.classList.remove("active"))}return t}function u(){return` <abbr class="field-required-indicator" title="${""+r.locale.required}">*</abbr>`}function p(e,t){return` <span id="${e}-required" class="field-required">
+      <span class="field-invalid">
+        <svg viewBox="0 0 20 20" focusable="false" aria-hidden="true"><path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-9a1 1 0 0 0 2 0v-2a1 1 0 1 0-2 0v2zm0 4a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"></path></svg>
+        ${""+r.locale.required_prompt}. ${t}
+      </span>
+    </span>
+    `}function m(e){return String(e).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function v(e){return(new DOMParser).parseFromString(e,"text/html").documentElement.textContent}function f(e){return String(e).replace(/"/g,"")}new MutationObserver(e=>{clearTimeout(d),d=setTimeout(()=>{!1===a&&!async function(){i=!1,a=!0,t=document.querySelectorAll("form[action='"+r.cart_url+"']")}()},300)}).observe(e,{childList:!0,subtree:!0}),document.addEventListener("DOMContentLoaded",function(){const t=document.querySelector("custom-fields");let i=void 0;var e;null!==t&&(t.setAttribute("role","status"),t.setAttribute("aria-live","polite"),i=l(i,t),e=document.querySelector("body"),new MutationObserver(e=>{setTimeout(()=>{i=l(i,t)},100)}).observe(e,{childList:!0,subtree:!0}))})}disconnectedCallback(){}}customElements.define("magical-custom-fields",MagicalCustomFields);

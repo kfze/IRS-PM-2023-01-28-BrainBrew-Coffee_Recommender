@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "8b40264b-15c7-441a-bf2b-9f0970c524ce",
+		"name": "CoffeeRecommender",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8899/recommendCoffee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "angle",
+						"value": "180",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8899/recommendCoffee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"recommendCoffee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

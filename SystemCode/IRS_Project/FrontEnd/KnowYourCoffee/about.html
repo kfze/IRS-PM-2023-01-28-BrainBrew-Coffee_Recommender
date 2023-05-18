@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Know Your Coffee</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/favicon.ico')}}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+		<link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Know Your Coffee</span>
+                <span class="site-heading-lower">Pick up your coffee</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Your Coffee Journey</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">Quiz</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Products</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">IT’S A MATCH MADE IN COFFEE.</span>
+                                    <span class="section-heading-lower">Have Fun!</span>
+                                </h2>
+								<p>1. What is your favorite time to drink coffee? Pick a time of the day:</p>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="timeOfDay" id="Morning" value="morning">
+								  <label class="form-check-label" for="Morning">
+									Morning
+								  </label>
+								</div>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="timeOfDay" id="Afternoon" value="afternoon">
+								  <label class="form-check-label" for="Afternoon">
+									Afternoon
+								  </label>
+								</div>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="timeOfDay" id="Anytime" value="anytime">
+								  <label class="form-check-label" for="Anytime">
+									Anytime
+								  </label>
+								</div>
+								
+	                            <p>
+		                           
+	                            </p>
+
+								<p>2. What type of coffee do you prefer?</p>
+								<div class="form-check">
+								<input class="form-check-input" type="radio" id="filter" name="coffee-type" value="filter">
+								<label class="form-check-label" for="filter">
+									Filter
+								</label>
+								</div>
+								<div class="form-check">
+								<input class="form-check-input" type="radio" id="espresso" name="coffee-type" value="espresso">
+								<label class="form-check-label" for="espresso">
+									Espresso
+								</label>
+								</div>
+								<p>
+		                           
+	                            </p>
+
+
+	                            <p>3.Please choose the flavour appeals to you? Pick at least 3 flavors.</p>
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Nutty">
+		                            <label class="form-check-label" for="flexCheckDefault">
+			                            Nutty
+		                            </label>
+	                            </div>
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Chocolaty">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Chocolaty
+		                            </label>
+	                            </div>
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Spices">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Spices
+		                            </label>
+	                            </div>
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Sweet">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Sweet
+		                            </label>
+	                            </div>
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Floral">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Floral
+		                            </label>
+	                            </div>
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Tea-like">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Tea-like
+		                            </label>
+	                            </div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="Fruity">
+									<label class="form-check-label" for="Fruity">Fruity</label>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="Citrus">
+										<label class="form-check-label" for="Citrus">Citrus fruit</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="Berry">
+										<label class="form-check-label" for="Berry">Berry</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="Stone">
+										<label class="form-check-label" for="Stone">Stone fruit</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="Tropical">
+										<label class="form-check-label" for="Tropical">Tropical fruit</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="Pome">
+										<label class="form-check-label" for="Pome">Pome fruit</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="Dried">
+										<label class="form-check-label" for="Dried">Dried fruit</label>
+									</div>
+								</div>
+	                            
+	                            <div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Herb-like">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Herb-like
+		                            </label>
+	                            </div>
+								<div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Cereal">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Cereal
+		                            </label>
+	                            </div>
+								<div class="form-check">
+		                            <input class="form-check-input" type="checkbox" value="" id="Alcohol">
+		                            <label class="form-check-label" for="flexCheckChecked">
+			                            Alcohol
+		                            </label>
+	                            </div>
+	                            <p>
+	                               
+	                            </p>
+	
+	                            
+								<p>4. Choose the origin of your beans</p>
+								<div class="form-check">
+								<input class="form-check-input" type="radio" name="origin" id="africa" value="africa">
+								<label class="form-check-label" for="africa">
+									Africa
+								</label>
+								</div>
+								
+								<div class="form-check">
+								<input class="form-check-input" type="radio" name="origin" id="arabia" value="arabia">
+								<label class="form-check-label" for="arabia">
+									Arabia
+								</label>
+								</div>
+								
+								<div class="form-check">
+								<input class="form-check-input" type="radio" name="origin" id="south_america" value="south_america">
+								<label class="form-check-label" for="south_america">
+									South America
+								</label>
+								</div>
+								<div class="form-check">
+								<input class="form-check-input" type="radio" name="origin" id="any_origin" value="any_origin">
+								<label class="form-check-label" for="any_origin">
+									Any Origin
+								</label>
+								</div>
+
+	                            <p>
+	
+	                            </p>
+	                            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+		                            <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="products.html">WHAT'S MY COFFEE MATCH?</a></div>
+	                            </div>
+	  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

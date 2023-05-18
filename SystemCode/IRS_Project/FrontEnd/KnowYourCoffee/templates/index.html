@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Know Your Coffee</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/favicon.ico')}}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+	            <span class="site-heading-upper text-primary mb-3">Know Your Coffee</span>
+	            <span class="site-heading-lower">Pick up your coffee</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="/">Start Your Coffee Journey</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('quiz') }}">Quiz</a></li>
+                        <!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('products') }}">Products</a></li> -->
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('store') }}">Store</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        <section class="page-section clearfix">
+            <div class="container">
+
+                <div class="row">
+                    <div class="intro">
+                        <!-- <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." /> -->
+                       
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="{{url_for('static', filename='assets/img/shop1.png')}}" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{{url_for('static', filename='assets/img/shop2.png')}}" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{{url_for('static', filename='assets/img/shop3.png')}}" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{{url_for('static', filename='assets/img/shop4.png')}}" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{{url_for('static', filename='assets/img/shop5.png')}}" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{{url_for('static', filename='assets/img/shop6.png')}}" class="d-block w-100" alt="">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+    
+                    
+                    <div class="col-xl-9 mx-auto">
+                         <div class="cta-inner bg-faded text-left p-5 mt-5 rounded">
+                             <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper text-center">The C<img src="https://img.icons8.com/external-those-icons-fill-those-icons/24/null/external-Coffee-Bean-fruits-and-vegetables-those-icons-fill-those-icons.png"/>mmunity Coffee</span>
+                             </h2>
+                             <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower text-center"><b>Smart Specialty Coffee Recommender</b></span>
+                             </h2>
+                                
+                        
+                            <p>Great coffee is a delicious journey and we want to make suggestions that are best suited to wherever you are on yours. We ask for your experience level first because your following answers can be interpreted very differently depending on how you identify.</p>
+                            
+                            <p>Our Smart specialty coffee recommender applies advanced machine reasoning techniques including decision automation, knowledge discovery, data mining, and cognitive techniques to assist coffee drinkers in specialty coffee selection based on their preferred flavors or flavors that suit their moods/situations. It turns the complicated and non-intuitive coffee flavors into a user-friendly and straightforward recommendation system, to ease the tedious coffee selection process for customers as well as saving time for baristas. </p>
+                            <div class="intro-button text-center mx-auto"><a class="btn btn-primary btn-xl" href="{{ url_for('quiz') }}">Know Your Coffee Today!</a></div>
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+<!--        <section class="page-section cta">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-xl-9 mx-auto">-->
+<!--                        <div class="cta-inner bg-faded text-center rounded">-->
+<!--                            <h2 class="section-heading mb-4">-->
+<!--                                <span class="section-heading-upper">Our Promise</span>-->
+<!--                                <span class="section-heading-lower">To You</span>-->
+<!--                            </h2>-->
+<!--                            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section> -->
+        <footer class="footer text-faded text-center py-5">
+          <div class="container"><p class="m-0 small">Copyright &copy; Know Your Coffee Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
