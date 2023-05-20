@@ -7285,6 +7285,11 @@ textarea.form-control-lg {
   margin-bottom: 1rem !important;
 }
 
+.my-31 {
+  margin-top: 0rem !important;
+  margin-bottom: 2rem !important;
+}
+
 .my-4 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
@@ -11488,4 +11493,136 @@ p {
 
 .address strong {
   font-size: 1.2rem;
+}
+
+.body2 {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  overflow-x: hidden;
+}
+
+.forms-btn{
+  width: 70%;
+  color: #fff;
+}
+
+.btn-img{
+  vertical-align: middle;
+  width: 1em;
+}
+
+.q-content {
+  height: 500px;
+  position: relative;
+}
+
+.q.forms{
+  height: auto;
+  background: url(../assets/img/form-bg.jpg) center center;
+  background-size: cover;
+  background-color: #fff;
+  text-align: center;
+  height:50%;
+}
+
+.q.forms p{
+  color: #fff;
+  width: 70%;
+  margin: 0 auto;
+}
+.q .rounded{
+  width: 70%;
+}
+.forms-title{
+  background-color: #fff;
+  padding: 15px 0;
+  margin-bottom: 0;
+}
+.q {
+  height: 500px;
+  background: #00000066;
+  border: 1px solid #eee;
+  padding: 10px;
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 1.25em;
+  line-height: 2;
+}
+
+.q .pos {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+
+.q {
+  transition: all 1s;
+}
+
+.a1 {
+  opacity: 1;
+  display: block;
+  z-index: 9;
+  animation: a1 1s;
+}
+
+.a2 {
+  opacity: 1;
+  display: block;
+  z-index: 9;
+  animation: a2 1s;
+}
+.a3 {
+  opacity: 1;
+  display: block;
+  z-index: 9;
+  animation: a3 1s;
+}
+.a4 {
+  opacity: 1;
+  display: block;
+  z-index: 9;
+  animation: a4 1s;
+}
+@keyframes a1 {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes a2 {
+  from {
+    transform: translateY(100%) scale(0.5);
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes a3 {
+  from {
+    transform: translateY(-100%) scale(0.5);
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes a4 {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
