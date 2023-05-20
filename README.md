@@ -62,20 +62,38 @@ After studying that the world of coffee continues to grow in both variety and co
 
 
 **Recommended Sections for Project Report / Paper:**
-- Executive Summary / Paper Abstract
-- Business Problem Background
-- Market Research
-- Project Objectives & Success Measurements
-- Project Solution (To detail domain modelling & system design.)
-- Project Implementation (To detail system development & testing approach.)
-- Project Performance & Validation (To prove project objectives are met.)
-- Project Conclusions: Findings & Recommendation
-- Appendix of report: Project Proposal
-- Appendix of report: Mapped System Functionalities against knowledge, techniques and skills of modular courses: MR, RS, CGS
-- Appendix of report: Installation and User Guide
-- Appendix of report: 1-2 pages individual project report per project member, including: Individual reflection of project journey: (1) personal contribution to group project (2) what learnt is most useful for you (3) how you can apply the knowledge and skills in other situations or your workplaces
-- Appendix of report: List of Abbreviations (if applicable)
-- Appendix of report: References (if applicable)
+- Introduction
+- Business Case
+  - Problem Statement
+  - Market Research
+  - Insdustry Overview
+  - Industry Overview
+  - Consumer Trends
+  - Competitive Landscape
+  - AI-Based Recommendation Systems in Retail
+  - Consumer Acceptance of AI-Based Systems
+  - Conclusion
+  - Proposed Solution
+- Knowledge Representation
+  - Coffee Flavor Categorization Rule
+  - Introduction to Coffee Cupping Notes
+- Data collection and preprocessing
+- Recommender System Design
+  - System Architecture Overview
+  - Frontend Design
+  - Backend Design
+  - System Algorithm
+  - Frontend and Backend Integration
+  - System Validation
+- Coffee Recommender System Commercial Values
+  - Advantages of System
+  - Limitations of System
+  - Future Outlook
+- Conclusion
+- References
+- Appendix
+  - Appendix A: Project proposal
+  - Appendix B: Individual report
 
 ---
 ## SECTION 7 : MISCELLANEOUS
