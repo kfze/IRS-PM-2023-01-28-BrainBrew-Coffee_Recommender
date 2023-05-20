@@ -93,7 +93,7 @@ After studying that the world of coffee continues to grow in both variety and co
 - References
 - Appendix
   - Appendix A: Project proposal
-  - Appendix B: Individual report
+  - Appendix B: Individual reports
 
 ---
 ## SECTION 7 : MISCELLANEOUS
