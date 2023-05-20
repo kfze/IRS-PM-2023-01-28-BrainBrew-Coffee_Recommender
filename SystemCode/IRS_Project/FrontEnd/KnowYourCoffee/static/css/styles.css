@@ -11539,7 +11539,7 @@ p {
 }
 .q {
   height: auto;
-  background: #00000066;
+  background: rgba(163, 115, 81, 0.5);
   border: 1px solid #eee;
   padding: 10px;
   position: absolute;
