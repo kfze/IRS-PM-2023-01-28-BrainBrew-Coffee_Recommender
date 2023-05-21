@@ -32,7 +32,7 @@ After studying that the world of coffee continues to grow in both variety and co
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-[![Coffee Recommender](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Intelligent Specialty Coffee Recommender")
+[![Coffee Recommender](https://youtu.be/FFR00nKrvVk/0.jpg)](https://youtu.be/FFR00nKrvVk "Intelligent Specialty Coffee Recommender")
 
 ---
 
