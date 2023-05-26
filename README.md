@@ -34,7 +34,7 @@ After studying that the world of coffee continues to grow in both variety and co
 
 [![Coffee Recommender](https://img.youtube.com/vi/gKygB2xTOxY/0.jpg)](https://youtu.be/gKygB2xTOxY "Intelligent Specialty Coffee Recommender")
 
-[![Coffee Recommender Technical Video](https://img.youtube.com/vi/-1UxpfTaxAY /0.jpg)](https://youtu.be/-1UxpfTaxAY "Intelligent Specialty Coffee Recommender Technical Video")
+[![Coffee Recommender Technical Video](https://img.youtube.com/vi/-1UxpfTaxAY/0.jpg)](https://youtu.be/-1UxpfTaxAY "Intelligent Specialty Coffee Recommender Technical Video")
 
 ---
 
